@@ -1,12 +1,8 @@
 import React, { FC } from 'react'
 import { BrowserRouter } from 'react-router-dom'
 import Routes from './routes'
-import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client'
-
-const client = new ApolloClient({
-  uri: 'https://graphqlzero.almansi.me/api',
-  cache: new InMemoryCache()
-});
+import { ApolloProvider } from '@apollo/client'
+import { client } from './utils/graphql'
 
 const App: FC = () => {
   return (
